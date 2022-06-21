@@ -37,3 +37,17 @@ pip install redis==4.3.3
 ```
 
 - Run task asynchorously following https://www.youtube.com/watch?v=IcuteHZJlHE
+
+- Create Plotly/Dash app with scatter plot
+```
+pip install plotly
+```
+```
+pip install dash
+```
+```
+pip install djang-plotly-dash
+```
+```
+pip install pandas
+```
