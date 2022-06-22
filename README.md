@@ -59,3 +59,17 @@ pip install dash-renderer
 ``` 
 
 - Tune configurations for all the app settings
+
+## Setting up Django-Plotly-Dash properly
+```
+pip install django-plotly-dash
+``` 
+- Add `'django_plotly_dash.apps.DjangoPlotlyDashConfig'` to `settings.py` under `INSTALLED_APPS`
+- Add `path('django_plotly_dash/', include('django_plotly_dash.urls')),` to `urls.py`
+```
+pip install channels daphne redis django-redis channels-redis
+```
+- Add `'channels'`, `'channels_redis'` to `settings.py` under `INSTALLED_APPS`
+- Add bootstrap theme for the apps with `CRISPY_TEMPLATE_PACK = 'bootstrap4'` in `settings.py`
+- Setup routing for Channels
+    - THis
