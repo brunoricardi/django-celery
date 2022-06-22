@@ -10,7 +10,7 @@ import plotly.express as px
 #import matplotlib.pyplot as plt
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = DjangoDash('testbarplot', external_stylesheets=external_stylesheets)
+app = DjangoDash('ScatterPlot', external_stylesheets=external_stylesheets)
 
 def scatter_plot(seed):
     """
@@ -33,7 +33,7 @@ app.layout = lambda: html.Div([
     html.Div([
 		html.Div([
 			dcc.Dropdown(
-				id='UOM',
+				id='seed',
 				options=[{'label': i, 'value': i} for i in seeds],
 				placeholder='Select the seed...'
 			)

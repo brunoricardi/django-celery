@@ -51,3 +51,11 @@ pip install djang-plotly-dash
 ```
 pip install pandas
 ```
+```
+pip install channels-redis
+```
+```
+pip install dash-renderer
+``` 
+
+- Tune configurations for all the app settings
