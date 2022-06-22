@@ -5,6 +5,8 @@ from dash.dependencies import Input, Output
 from django_plotly_dash import DjangoDash
 
 import plotly.express as px
+import plotly.graph_objects as go
+import numpy as np
 
 #import numpy as np
 #import matplotlib.pyplot as plt
@@ -21,7 +23,8 @@ def scatter_plot(seed):
     x = np.arange(1,1000,1)
     y = np.random.rand(1000)
 
-    fig = px.scatter(x=x, y=y)
+    fig = go.Figure(data=go.Scatter(x=x, y=y, mode='markers'))
+    #fig = px.scatter(x=x, y=y)
 		
     return fig
 
@@ -46,7 +49,7 @@ app.layout = lambda: html.Div([
 
 @app.callback(
 	Output('Scatter-plot', 'figure'),
-	Input('Seed', 'value')
+	Input('seed', 'value')
 )	
 def update_graph(seed):
     if(seed):
